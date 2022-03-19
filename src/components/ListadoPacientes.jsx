@@ -17,6 +17,9 @@ const ListadoPacientes = ({pacientes, setPacientes}) => {
                 return(
                     // llama este componente tantas veces se vaya creando
                     <Paciente 
+                         // Siempre que mandemos un arreglo debemos mandar un key Unico
+                         // Creamos un Id Unico
+                        key={paciente.id}
                         paciente={paciente}
                     />
                 )
