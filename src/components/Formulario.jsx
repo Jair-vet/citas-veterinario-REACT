@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 
 
-const Formulario = ({setPacientes}) => {
+const Formulario = ({pacientes, setPacientes}) => {
     const [nombre, setNombre] = useState('');
     const [propietario, setPropietario] = useState('');
     const [email, setEmail] = useState('');
@@ -32,9 +32,9 @@ const Formulario = ({setPacientes}) => {
             fecha,
             sintomas
         } 
-        console.log(objetoPaciente);
+        // console.log(objetoPaciente);
 
-        setPacientes(nombre)
+        setPacientes([...pacientes, objetoPaciente]);
     }
 
 
