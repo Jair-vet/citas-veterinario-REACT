@@ -1,6 +1,7 @@
 import Paciente from "./Paciente"
 
-const ListadoPacientes = () => {
+const ListadoPacientes = ({pacientes, setPacientes}) => {
+
   return (
       <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll">
 
@@ -10,9 +11,19 @@ const ListadoPacientes = () => {
               <span className="text-indigo-900 font-bold">Pacientes y Citas</span>
           </p>
 
-          <Paciente />
-          <Paciente />
-          <Paciente />
+            {/* imprimir los valores en comsola usando .map() */}
+            {pacientes.map( paciente => {
+
+                return(
+                    // llama este componente tantas veces se vaya creando
+                    <Paciente 
+                        paciente={paciente}
+                    />
+                )
+
+            })}
+
+         
       
       </div>
   )
