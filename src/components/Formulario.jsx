@@ -35,6 +35,13 @@ const Formulario = ({pacientes, setPacientes}) => {
         // console.log(objetoPaciente);
 
         setPacientes([...pacientes, objetoPaciente]);
+
+        // TODO: Reiniciar el Formulario
+        setNombre('')
+        setPropietario('')
+        setEmail('')
+        setFecha('')
+        setSintomas('')
     }
 
 
